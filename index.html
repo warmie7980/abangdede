@@ -193,7 +193,9 @@ select:focus {
     <div class="overlay-box">
         <h2 class="blink">INFORMASI</h2>
         <p id="typing"></p>
-        <button onclick="tutupInfo()">OK</button>
+        <button id="okButton" onclick="tutupInfo()" style="display:none;">
+    OK
+</button>
     </div>
 </div>
 <header>
@@ -234,14 +236,17 @@ function tutupInfo() {
 }
 </script>
 <script>
-const text = "Selamat datang di WARMIE dengan ini kami sampaikan warmie mwmbuka donasi bagi yang ingin menyumbangkan sebagian rezekinya di hari Jum'at berkah ini";
+const text = "Selamat datang di WARMIE dengan ini kami sampaikan WARMIE membuka donasi bagi yang ingin menyumbangkan sebagian rezekinya di hari Jum'at berkah ini";
 let index = 0;
 
 function ketik() {
     if (index < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(index);
         index++;
-        setTimeout(ketik, 100); // kecepatan ketik
+        setTimeout(ketik, 100);
+    } else {
+        // tampilkan tombol setelah selesai mengetik
+        document.getElementById("okButton").style.display = "inline-block";
     }
 }
 
