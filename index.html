@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dropdown Menu</title>
+<title>WARMIE</title>
 
 <style>
 * {
@@ -14,14 +14,42 @@
 
 body {
     background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
     min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: #111;
+    padding: 30px;
+    border-bottom: 1px solid #333;
+    text-align: right;
+}
+
+.judul {
+    font-family: "Courier New", monospace;
+    font-size: 40px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.subjudul {
+    font-family: "Courier New", monospace;
+    font-size: 60px;
+    color: #a9a9a9;
+    margin: 0;
+}
+
+/* ISI HALAMAN */
+main {
+    height: calc(100vh - 150px);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Courier New", monospace;
 }
 
-/* Kotak utama */
+/* KOTAK DROPDOWN */
 .dropdown-box {
     background-color: #111;
     border: 2px solid #00ff00;
@@ -30,13 +58,12 @@ body {
     text-align: center;
 }
 
-/* Judul */
 .dropdown-box h2 {
     color: #ffd700;
     margin-bottom: 15px;
+    font-family: "Courier New", monospace;
 }
 
-/* Dropdown */
 select {
     width: 250px;
     padding: 10px;
@@ -57,16 +84,23 @@ select:focus {
 </head>
 <body>
 
-<div class="dropdown-box">
-    <h2>PILIH MENU</h2>
+<header>
+    <h1 class="judul">WARMIE</h1>
+    <h1 class="subjudul">ABANG-DEDE REBORN</h1>
+</header>
 
-    <select>
-        <option value="">-- Pilih Menu --</option>
-        <option>MIE JEBEW</option>
-        <option>MIE YAMIN</option>
-        <option>MIE ORIGINAL</option>
-    </select>
-</div>
+<main>
+    <div class="dropdown-box">
+        <h2>PILIH MENU</h2>
+
+        <select>
+            <option>-- Pilih Menu --</option>
+            <option>MIE JEBEW</option>
+            <option>MIE YAMIN</option>
+            <option>MIE ORIGINAL</option>
+        </select>
+    </div>
+</main>
 
 </body>
 </html>
