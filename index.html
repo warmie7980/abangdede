@@ -175,6 +175,17 @@ select:focus {
         opacity: 1;
     }
 }
+#typing::after {
+    content: "|";
+    color: #00ff00;
+    animation: cursor 0.7s infinite;
+}
+
+@keyframes cursor {
+    50% {
+        opacity: 0;
+    }
+}
 </style>
 </head>
 <body>
@@ -182,9 +193,9 @@ select:focus {
     <div class="overlay-box">
         <h2 class="blink">INFORMASI</h2>
         <p>
-            Selamat datang di WARMIE!<br>
-            Assalamu’alaikum warahmatullahi wabarakatuh.
-        </p>
+    <span id="typing"></span><br>
+    Assalamu’alaikum warahmatullahi wabarakatuh.
+    </p>
         <button onclick="tutupInfo()">OK</button>
     </div>
 </div>
@@ -224,6 +235,20 @@ function pilihMenu() {
 function tutupInfo() {
     document.getElementById("infoBox").style.display = "none";
 }
+</script>
+<script>
+const text = "Selamat datang di WARMIE!";
+let index = 0;
+
+function ketik() {
+    if (index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(ketik, 100); // kecepatan ketik
+    }
+}
+
+ketik();
 </script>
 </body>
 </html>
