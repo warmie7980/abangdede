@@ -155,24 +155,23 @@ select:focus {
     background: #00bfff;
 }
 .blink {
-    color: red;
-    animation: kedip 1s infinite;
+    animation: kedip 0.8s infinite;
 }
 
 @keyframes kedip {
     0% {
         color: red;
-        opacity: 1;
+        text-shadow: 0 0 10px red;
     }
 
     50% {
-        color: #ff6666;
-        opacity: 0.3;
+        color: yellow;
+        text-shadow: 0 0 20px yellow;
     }
 
     100% {
         color: red;
-        opacity: 1;
+        text-shadow: 0 0 10px red;
     }
 }
 </style>
