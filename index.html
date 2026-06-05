@@ -98,9 +98,57 @@ select:focus {
     font-family: "Courier New", monospace;
     font-size: 14px;
 }
+.info-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    background: #111;
+    border: 2px solid #00ff00;
+    padding: 20px;
+    text-align: center;
+    z-index: 9999;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+}
+
+.info-box h3 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.info-box button {
+    padding: 8px 20px;
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info-box button:hover {
+    background: #00bfff;
+}
 </style>
 </head>
 <body>
+<div class="info-box" id="infoBox">
+    <h3>📢 MEDIA INFORMASI</h3>
+    <p>
+        Selamat datang di WARMIE!  
+        Silakan pilih menu yang tersedia untuk melihat aneka makanan kami.
+    </p>
+
+    <button onclick="tutupInfo()">OK</button>
+</div>
 
 <header>
     <h1 class="judul">WARMIE</h1>
