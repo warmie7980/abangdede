@@ -239,18 +239,17 @@ function tutupInfo() {
 }
 </script>
 <script>
-const text = 'Selamat datang di WARMIE dengan ini kami sampaikan WARMIE membuka donasi 
+const text = `Selamat datang di WARMIE dengan ini kami sampaikan WARMIE membuka donasi 
     bagi yang ingin menyumbangkan sebagian rezekinya di hari Jum'at berkah ini sumbangan jum'at berkah
-    akan disalurkan dalam bentuk nasi box dengan harga perboxnya sebesar Rp. 10.000,-';
+    akan disalurkan dalam bentuk nasi box dengan harga perboxnya sebesar Rp. 10.000,-`;
 let index = 0;
 
 function ketik() {
     if (index < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(index);
         index++;
-        setTimeout(ketik, 100);
+        setTimeout(ketik, 50);
     } else {
-        // tampilkan tombol setelah selesai mengetik
         document.getElementById("okButton").style.display = "inline-block";
     }
 }
