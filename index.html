@@ -154,12 +154,33 @@ select:focus {
 .overlay-box button:hover {
     background: #00bfff;
 }
+.blink {
+    color: red;
+    animation: kedip 1s infinite;
+}
+
+@keyframes kedip {
+    0% {
+        color: red;
+        opacity: 1;
+    }
+
+    50% {
+        color: #ff6666;
+        opacity: 0.3;
+    }
+
+    100% {
+        color: red;
+        opacity: 1;
+    }
+}
 </style>
 </head>
 <body>
 <div class="overlay" id="infoBox">
     <div class="overlay-box">
-        <h2>MEDIA INFORMASI</h2>
+        <h2 class="blink">INFORMASI</h2>
         <p>
             Selamat datang di WARMIE!<br>
             Assalamu’alaikum warahmatullahi wabarakatuh.
