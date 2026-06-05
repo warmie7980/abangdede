@@ -112,12 +112,11 @@ select:focus {
     <div class="dropdown-box">
         <h2>PILIH MENU</h2>
 
-        <select>
-            <option>-- Pilih Menu --</option>
-            <option>MIE JEBEW</option>
-            <option>MIE YAMIN</option>
-            <option>MIE ORIGINAL</option>
-        </select>
+        <select id="menuSelect" onchange="pilihMenu()">
+    <option value="">-- Pilih Menu --</option>
+    <option value="warmie.html">WARMIE/ANEKA MIE</option>
+    <option value="nasiuduk.html">WARUNG EMAK</option>
+</select>
     </div>
 
     <div class="footer-section">
@@ -128,6 +127,14 @@ select:focus {
     </div>
 
 </main>
+<script>
+function pilihMenu() {
+    const menu = document.getElementById("menuSelect").value;
 
+    if (menu !== "") {
+        window.location.href = menu;
+    }
+}
+</script>
 </body>
 </html>
