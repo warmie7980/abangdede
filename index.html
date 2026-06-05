@@ -125,16 +125,68 @@ select:focus {
     margin-bottom: 15px;
 }
 
-.info-box button {
-    padding: 8px 20px;
-    background: #1e90ff;
+.info-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    background: #111;
+    border: 2px solid #00ff00;
+    padding: 20px;
+    text-align: center;
+    z-index: 9999;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+}
+
+.info-box button:hover {
+    background: #00bfff;
+}
+.overlay-box {
+    width: 600px;
+    max-width: 90%;
+    padding: 40px;
+    background: #111;
+    border: 2px solid #00ff00;
+    text-align: center;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+}
+
+/* kotak utama */
+.overlay-box {
+    width: 400px;
+    background: #111;
+    border: 2px solid #00ff00;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+}
+
+.overlay-box h2 {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+.overlay-box p {
     color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.overlay-box button {
+    padding: 10px 25px;
+    background: #1e90ff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.info-box button:hover {
+.overlay-box button:hover {
     background: #00bfff;
 }
 </style>
@@ -148,6 +200,7 @@ select:focus {
     </p>
 
     <button onclick="tutupInfo()">OK</button>
+</div>
 </div>
 
 <header>
